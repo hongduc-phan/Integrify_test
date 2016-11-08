@@ -1,0 +1,85 @@
+{
+  "paths": {
+    "base": {
+      "src": "./src/",
+      "build": "./build/",
+      "linter": "./linter/",
+      "npm": "./node_modules/",
+      "bower": "./vendor/"
+    },
+    "linter": {
+      "html": ".htmlhintrc",
+      "css": "csslintrc.json",
+      "sass": ".sass-lint.yml",
+      "js": ".jshintrc"
+    },
+    "assets": {
+      "scss": "assets/scss/",
+      "css": "assets/css/",
+      "img": "assets/img/",
+      "js": "assets/js/"
+    }
+  },
+  "vendor": {
+    "dev": {
+      "js": [
+        "bower_components/jquery/dist/jquery.js",
+        "bower_components/bootstrap/dist/js/bootstrap.js",
+        "bower_components/slick-carousel/slick/slick.js"
+      ],
+      "css": [
+        "bower_components/bootstrap/dist/css/bootstrap.css",
+        "bower_components/font-awesome/css/font-awesome.css",
+        "bower_components/slick-carousel/slick/slick.css"
+      ]
+    },
+    "production": {
+      "js": "vendor.js",
+      "css": "vendor.css"
+    }
+  },
+  "copy": {
+    "dev": [
+      {
+        "src": "bower_components/font-awesome/fonts/*",
+        "to": "bower_components/font-awesome/fonts/"
+      },
+      {
+        "src": "bower_components/slick-carousel/slick/ajax-loader.gif",
+        "to": "bower_components/slick-carousel/slick/"
+      },
+      {
+        "src": "bower_components/slick-carousel/slick/fonts/slick.woff",
+        "to": "bower_components/slick-carousel/slick/fonts/"
+      },
+      {
+        "src": "bower_components/slick-carousel/slick/fonts/slick.tff",
+        "to": "bower_components/slick-carousel/slick/fonts/"
+      }
+    ],
+    "production": [
+      {
+        "src": "bower_components/font-awesome/fonts/*",
+        "to": "assets/fonts/"
+      },
+      {
+        "src": "bower_components/slick-carousel/slick/ajax-loader.gif",
+        "to": "assets/css"
+      },
+      {
+        "src": "bower_components/slick-carousel/slick/fonts/slick.woff",
+        "to": "assets/css/fonts"
+      },
+      {
+        "src": "bower_components/slick-carousel/slick/fonts/slick.tff",
+        "to": "assets/css/fonts"
+      }
+    ]
+  },
+  "argv": {
+    "noLinter": "noLinter",
+    "silent": "silent",
+    "minify": "minify",
+    "production": "production"
+  }
+}

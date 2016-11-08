@@ -1,0 +1,17 @@
+options:
+  formatter: 'stylish'
+  merge-default-rules: true
+
+rules:
+  # check other rules here https://github.com/sasstools/sass-lint/tree/master/docs/rules
+  # config demo http://sasstools.github.io/make-sass-lint-config/
+  # Example:
+  # final-newline: 0
+  property-sort-order: 0
+  class-name-format:
+    - 1
+    - convention: hyphenatedbem
+  nesting-depth:
+      - 1
+      - max-depth: 3
+  force-element-nesting: 0

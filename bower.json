@@ -1,0 +1,22 @@
+{
+  "name": "kraith",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "nntg <truong-giang.nguyen-ngoc@fullsix.com>"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "slick-carousel": "^1.6.0",
+    "jquery-migrate": "https://code.jquery.com/jquery-migrate-1.4.1.js"
+  }
+}
