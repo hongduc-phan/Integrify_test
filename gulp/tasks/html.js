@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     config = require('../config/config.json'),
     argv = require('yargs').argv,
     htmlhint = require('gulp-htmlhint'),
-    print = require('gulp-print'),
+    print = require('gulp-print').default,
     inject = require('gulp-inject'),
     gulpif = require('gulp-if');
 

@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     argv = require('yargs').argv,
     jade = require('gulp-pug'),
     htmlhint = require('gulp-htmlhint'),
-    print = require('gulp-print'),
+    print = require('gulp-print').default,
     inject = require('gulp-inject'),
     gulpif = require('gulp-if');
 
