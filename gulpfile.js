@@ -42,12 +42,13 @@ gulp.task('watch', function () {
     gulp.watch(config.paths.base.src + config.paths.assets.js + '**/*js', ['js']).on("change", reload);
     gulp.watch(config.paths.base.src + config.paths.assets.img + '**/*', ['img']).on("change", reload);
     gulp.watch(config.paths.base.src + '**/*.jade', ['jade']).on("change", reload);
+    gulp.watch(config.paths.base.src + '**/*.html', ['html']).on("change", reload);
 });
 
 gulp.task('build', function (cb) {
     runSequence('clean', 'vendor',
         ['copy', 'img', 'js', 'scss'],
-        'jade', cb);
+        'jade', 'html', cb);
 });
 
 gulp.task('copy', function () {
