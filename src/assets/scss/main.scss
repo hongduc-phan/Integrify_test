@@ -1,11 +1,32 @@
-/*VARIABLE*/
-@import "variable";
+@import 'variable';
+@import 'mixins';
+@import 'components/button';
+@import 'components/header';
+@import 'pages/home/home';
 
-@import "components/button";
-
-h1 {
-  color: red;
-
-  font-size: 40px;
+body {
+  font-size: $fontsize-body;
+  color: $color-body;
+  font-family: $font-family;
 }
 
+.view-range {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include screen-media('mobile') {
+    width: map-get($map: $view-ranges, $key: 'mobile');
+  }
+
+  @include screen-media('tablet') {
+    width: map-get($map: $view-ranges, $key: 'tablet');
+  }
+
+  @include screen-media('tablet-large') {
+    width: map-get($map: $view-ranges, $key: 'tablet-large');
+  }
+
+  @include screen-media('desktop') {
+    width: map-get($map: $view-ranges, $key: 'desktop');
+  }
+}

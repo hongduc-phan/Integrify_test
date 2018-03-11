@@ -10,8 +10,31 @@ var gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   gutil = require('gulp-util'),
   print = require('gulp-print').default,
-  gulpif = require('gulp-if');
+  gulpif = require('gulp-if'),
+  stylelint = require('stylelint'),
+  postcss     = require('gulp-postcss'),
+  reporter    = require('postcss-reporter'),
+  syntax_scss = require('postcss-scss');
 
+
+var stylelintConfig = {
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'else', 'for', 'each', 'while', 'mixin', 'include', 'content', 'return', 'function']
+    }]
+  }
+};
+
+var processors = [
+  stylelint(stylelintConfig),
+  reporter({
+    //clearMessages: true
+  })
+];
 
 gulp.task('scss', function () {
 
@@ -24,15 +47,13 @@ gulp.task('scss', function () {
       minify: (argv[config.argv.minify])
     };
   gulp.src(path.join(config.paths.base.src, config.paths.assets.scss, '**/*.scss'))
-    .pipe(gulpif((checkOutput.linter), sassLint({
-      configFile: path.join(config.paths.base.linter, config.paths.linter.sass)
-    })))
-    .pipe(gulpif((checkOutput.linter), sassLint.format()))
-    .pipe(gulpif((checkOutput.linter), sassLint.failOnError()));
+    .pipe(gulpif((checkOutput.linter), postcss(processors, {syntax: syntax_scss})));
+    // .pipe(gulpif((checkOutput.linter), sassLint.format()))
+    // .pipe(gulpif((checkOutput.linter), sassLint.failOnError()));
 
   gulp.src(path.join(config.paths.base.src, config.paths.assets.scss, '*.scss'))
     .pipe(sourcemaps.init())
-    .pipe(autoprefixer({browsers: ['> 1%', 'IE 9'], cascade: false}))
+    //.pipe(autoprefixer({browsers: ['> 1%', 'IE 9'], cascade: false}))
     .pipe(sass({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
@@ -61,6 +82,7 @@ gulp.task('scss', function () {
       }
 
     })))
+    .pipe(autoprefixer({browsers: ['> 1%', 'IE 9'], cascade: false}))
     .pipe(gulpif((checkOutput.linter), csslint()))
     .pipe(gulpif((checkOutput.linter), csslint.formatter()))
     .pipe(sourcemaps.write('.'))

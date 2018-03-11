@@ -1,8 +1,24 @@
-/*COLOR*/
-$color-brand: #000;
-$color-primary: #00AEEF;
-$color-background: #FFFFFF;
-$color-title: #FFFF00;
-$color-text: #a9a9a9;
-/*MORE*/
 
+// COLORS
+$color-primary: #f44336;
+$color-second: #666;
+$color-body: #333;
+
+// FONTS
+$fontsize-body: 15px;
+$font-family: 'Raleway', sans-serif;
+
+//view range
+$view-ranges: (
+  mobile: 352px,
+  tablet: 750px,
+  tablet-large: 970px,
+  desktop: 1170px,
+);
+// Screen Size
+$screen-sizes: (
+  desktop: 1280px,
+  tablet: 768px,
+  tablet-large: 992px,
+  mobile: 360px,
+);

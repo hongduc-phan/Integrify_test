@@ -1,0 +1,38 @@
+@mixin screen-media($val) {
+  @if $val == 'mobile' {
+    @media screen and (min-width: map-get($map: $screen-sizes, $key: 'mobile')) {
+      @content;
+    }
+  }
+
+  @if $val == 'tablet' {
+    @media screen and (min-width: map-get($map: $screen-sizes, $key: 'tablet')) {
+      @content;
+    }
+  }
+
+  @if $val == 'tablet-large' {
+    @media screen and (min-width: map-get($map: $screen-sizes, $key: 'tablet-large')) {
+      @content;
+    }
+  }
+
+  @if $val == 'desktop' {
+    @media screen and (min-width: map-get($map: $screen-sizes, $key: desktop)) {
+      @content;
+    }
+  }
+}
+
+@mixin element($val) {
+  @at-root &__#{$val} {
+    @content;
+  }
+}
+
+@mixin modifier($val) {
+  @at-root &--#{$val} {
+    @content;
+  }
+}
+

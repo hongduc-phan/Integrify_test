@@ -1,3 +1,10 @@
 .btn {
-  padding: 15px 10px;
+  background-color: #fff;
+  color: $color-second;
+  padding: 15px 40px;
+  font-size: 14px;
+
+  @include modifier('ghost') {
+    background-color: transparent;
+  }
 }

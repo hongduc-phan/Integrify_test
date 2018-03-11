@@ -1,0 +1,68 @@
+@import '../../../components/section-title';
+@import 'core-values';
+
+.about-intro {
+  @include element('img') {
+    display: inline-flex;
+    //background-color: $color-primary;
+  }
+
+  @include element('icon') {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    color: #fff;
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  @include element('circle-outer') {
+    min-width: 76px;
+    height: 76px;
+    border: 1px solid red;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      background-color: red;
+      content: '';
+      top: 50%;
+      right: -30px;
+    }
+
+    &::after {
+      position: absolute;
+      width: 1px;
+      height: 50px;
+      background-color: red;
+      content: '';
+      top: 50%;
+      margin-top: -25px;
+      right: -30px;
+    }
+  }
+
+  @include element('circle-inner') {
+    min-width: 60px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  @include element('title') {
+    font-size: 20px;
+  }
+
+  @include element('plain-text') {
+    padding-left: 48px;
+    flex-grow: 1;
+  }
+}
