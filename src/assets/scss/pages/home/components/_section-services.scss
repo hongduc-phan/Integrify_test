@@ -1,0 +1,14 @@
+.s-services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: grey;
+    @include element('items') {
+      margin-left: -16px;
+      margin-right: -16px;
+
+      @include screen-media('tablet') {
+          display: flex;
+          flex-wrap: wrap;
+      }
+    } 
+}

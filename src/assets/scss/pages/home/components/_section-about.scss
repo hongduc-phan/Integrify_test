@@ -1,5 +1,5 @@
 @import '../../../components/section-title';
-@import 'core-values';
+@import '../../../components/core-values';
 
 .about-intro {
   @include element('img') {
@@ -61,8 +61,35 @@
     font-size: 20px;
   }
 
-  @include element('plain-text') {
+  @include element('content') {
     padding-left: 48px;
     flex-grow: 1;
   }
 }
+
+.s-about{
+  @include screen-media('desktop') {
+    display: flex;
+    padding-top: 160px;
+
+    @include element('intro') {
+      width: 50%;
+      padding-right: 16px;
+    }
+  }
+  @include element('core-values') {
+    padding-top: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+
+    @include screen-media('desktop') {
+      display: flex;
+      padding-left: 16px;
+    }
+
+    @include element('column') {
+      width: 50%;
+    }
+  }
+}
+

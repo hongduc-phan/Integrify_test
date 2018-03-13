@@ -2,13 +2,14 @@
   background-image: url('../img/bg-banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 500px;
-  padding-top: 180px;
+  min-height: 500px;
+  padding-top: 100px;
   position: relative;
   background-position: center center;
 
   @include screen-media('tablet') {
-    height: 700px;
+    min-height: 700px;
+    padding-top: 180px;
   }
 
   @include screen-media('desktop') {

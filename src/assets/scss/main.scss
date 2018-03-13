@@ -4,19 +4,22 @@
 @import 'components/header';
 @import 'pages/home/home';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-size: $fontsize-body;
   color: $color-body;
   font-family: $font-family;
+  
 }
 
 .view-range {
+  padding-left: 16px;
+  padding-right: 16px; 
   margin-left: auto;
   margin-right: auto;
-
-  @include screen-media('mobile') {
-    width: map-get($map: $view-ranges, $key: 'mobile');
-  }
 
   @include screen-media('tablet') {
     width: map-get($map: $view-ranges, $key: 'tablet');

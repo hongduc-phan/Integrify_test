@@ -3,6 +3,11 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  @include screen-media('desktop') {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
   @include element('text') {
     font-size: 20px;
     color: $color-primary;

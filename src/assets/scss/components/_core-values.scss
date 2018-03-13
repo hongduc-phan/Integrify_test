@@ -1,0 +1,118 @@
+.core-values {
+  @include element('body-text') {
+    font-size: 16px;
+    color: #fff;
+  }
+  //services
+  @include modifier('services-1') {
+   
+
+    @include screen-media('tablet') {
+      display: flex; 
+    }
+
+    @include screen-media('desktop') {
+      width: 33.33%; 
+    }
+  }
+
+  @include modifier('services-2') {
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 16px;
+      padding-top: 16px;
+
+    @include screen-media('tablet') {
+      margin-bottom: 0;
+      width: 50%;
+    }
+
+    @include screen-media('desktop') {
+      width: 33.33%; 
+    }
+  }
+
+  @include modifier('services-3') {
+    @include screen-media('tablet') { 
+      width: 50%;
+    }
+    @include screen-media('desktop') {
+      width: 33.33%; 
+    }
+  }
+
+  @include element('column') {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include modifier('service') {
+      background-color: grey;
+    }
+
+    @include screen-media('tablet') {
+      width: 50%;
+    }
+
+    @include modifier('service-2') {
+      padding-left: 16px;
+      padding-right: 16px;
+      background-color: #f44336;
+      min-height: 100%;
+      padding-bottom: 16px;
+      
+      @include screen-media('tablet') {
+        width: 100%;
+      }
+    }
+
+    
+  }
+
+  @include screen-media('tablet') {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include screen-media('desktop') {
+    flex-wrap: wrap;
+  }
+
+  @include element('item') {
+    background-color: #f44336;
+    padding-top: 24px;
+    text-align: center;
+    padding-bottom: 24px;
+    
+    @include modifier('service-2') {
+      border: 1px solid #fff;
+      height: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    
+    @include modifier('service') {
+      background-color: #fff;
+      max-height: inherit;
+      & > svg {
+        color: #f44336;
+      }
+
+      & > h3 {
+        color: black;
+      }
+    }
+  }
+
+  @include element('icon') {
+    font-size: 42px;
+    color: #fff;
+  }
+
+  @include element('text') {
+    color: #fff;
+    font-size: 24px;
+  }
+}

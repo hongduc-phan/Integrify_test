@@ -42,11 +42,13 @@
 
     @include screen-media('tablet') {
       display: flex;
+      margin-right: -15px;
     }
   }
 
   @include element('items') {
     display: flex;
+    padding: 0;
   }
 
   @include element('item') {
