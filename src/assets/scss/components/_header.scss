@@ -1,72 +1,32 @@
 .header {
-  background-color: red;
+  background-color: $color-bg-header;
+
+  @include element('logo-name-company') {
+    display: flex;
+    align-content: center;
+  }
 
   @include element('logo') {
-    & > a {
-      font-size: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fff;
-    }
+    height: 32px;
+    width: 32px;
+    background-color: $color-bg-logo;
+    color: $color-logo;
+    position: relative;
   }
 
-  @include element('content') {
-    height: 50px;
-    display: flex;
-    align-items: center;
+  @include element('icon') {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
   }
 
-  @include element('menu') {
-    margin-left: auto;
-    border: 1px solid $color-second;
-    padding: 4px 8px 4px 8px;
-
-    @include screen-media('tablet') {
-      border: none;
-    }
-  }
-}
-
-.nav {
-  @include modifier('mobile') {
-    font-size: 25px;
-    color: $color-second;
-
-    @include screen-media('tablet') {
-      display: none;
-    }
-  }
-
-  @include modifier('desktop') {
-    display: none;
-
-    @include screen-media('tablet') {
-      display: flex;
-      margin-right: -15px;
-    }
-  }
-
-  @include element('items') {
-    display: flex;
-    padding: 0;
-  }
-
-  @include element('item') {
-    padding-left: 15px;
-    padding-right: 15px;
-    list-style-type: none;
-    font-size: 14px;
-
-    & > a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-  }
-
-  @include element('item-icon') {
-    font-size: 14px;
-    color: #fff;
+  @include element('name-company') {
+    margin: 0;
+    padding-left: 32px;
+    font-size: 24px;
+    color: $color-header-text;
+    font-weight: bolder;
   }
 }

@@ -1,22 +1,30 @@
-
-// COLORS
-$color-primary: #f44336;
-$color-second: #666;
-$color-body: #333;
-
-// FONTS
-$fontsize-body: 15px;
-$font-family: 'Raleway', sans-serif;
-
 //view range
 $view-ranges: (
-  tablet: 750px,
-  tablet-large: 970px,
+  tablet-normal: 750px,
   desktop: 1170px,
+  tablet: 912px,
 );
 // Screen Size
 $screen-sizes: (
   desktop: 1280px,
-  tablet: 768px,
-  tablet-large: 992px,
+  tablet-normal: 768px,
+  tablet: 976px,
 );
+
+/*COLOR*/
+$color-background: #f1f1f1;
+$color-view-range: #fff;
+$color-bg-header: #adb5bd;
+$color-logo: #adb5bd;
+$color-header-text: #fff;
+$color-bg-logo: #fff;
+$color-title: #757575;
+$color-btn-add: #757575;
+$color-body-text: #505050;
+$color-bg-btn-save: #07f;
+$color-btn-save: #fff;
+$color-bg-btn: #ededed;
+$color-icon: #909090;
+$color-bg-input-add: #fafafa;
+$color-text-input: #909090;
+$color-bg-input-save: #f9f9f9;

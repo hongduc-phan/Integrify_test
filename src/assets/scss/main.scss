@@ -2,34 +2,44 @@
 @import 'mixins';
 @import 'components/button';
 @import 'components/header';
+@import 'components/list';
+@import 'components/input';
+@import 'components/info';
+@import 'components/title';
 @import 'pages/home/home';
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-size: $fontsize-body;
-  color: $color-body;
-  font-family: $font-family;
-  
-}
-
 .view-range {
-  padding-left: 16px;
-  padding-right: 16px; 
   margin-left: auto;
   margin-right: auto;
+
+  @include screen-media('tablet-normal') {
+    width: map-get($map: $view-ranges, $key: 'tablet-normal');
+  }
 
   @include screen-media('tablet') {
     width: map-get($map: $view-ranges, $key: 'tablet');
   }
 
-  @include screen-media('tablet-large') {
-    width: map-get($map: $view-ranges, $key: 'tablet-large');
-  }
-
   @include screen-media('desktop') {
     width: map-get($map: $view-ranges, $key: 'desktop');
   }
+}
+
+.content-header {
+  @include padding-header();
+}
+.content-info {
+  @include padding-info();
+}
+
+.content-input {
+  @include padding-input();
+}
+
+p {
+  margin: 0;
 }

@@ -5,14 +5,14 @@
     }
   }
 
-  @if $val == 'tablet' {
+  @if $val == 'tablet-normal' {
     @media screen and (min-width: map-get($map: $screen-sizes, $key: 'tablet')) {
       @content;
     }
   }
 
-  @if $val == 'tablet-large' {
-    @media screen and (min-width: map-get($map: $screen-sizes, $key: 'tablet-large')) {
+  @if $val == 'tablet' {
+    @media screen and (min-width: map-get($map: $screen-sizes, $key:'tablet' )) {
       @content;
     }
   }
@@ -36,3 +36,14 @@
   }
 }
 
+@mixin padding-header() {
+  padding: 32px 0 32px 0;
+}
+
+@mixin padding-info() {
+  padding: 24px;
+}
+
+@mixin padding-input() {
+  padding: 16px;
+}

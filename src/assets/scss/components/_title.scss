@@ -1,0 +1,18 @@
+.title {
+  margin: 0;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 500;
+
+  @include modifier('tel') {
+    width: 22%;
+  }
+
+  @include modifier('mail') {
+    width: 35%;
+  }
+
+  @include modifier('name') {
+
+  }
+}

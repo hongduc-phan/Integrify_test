@@ -1,11 +1,27 @@
 .btn {
-  background-color: #fff;
-  color: $color-second;
-  padding: 15px 40px;
-  font-size: 14px;
+  background-color: $color-bg-btn;
+  font-size: 16px;
+  height: 40px;
+  font-weight: 500;
+  padding-left: 16px;
+  padding-right: 16px;
 
-  @include modifier('ghost') {
-    background-color: transparent;
+  @include modifier('add') {
+    width: 14%;
+    color: $color-btn-add;
+    border: 1px solid $color-bg-btn;
+    margin-left: auto;
   }
 
+  @include modifier('save') {
+    color: $color-btn-save;
+    background-color: $color-bg-btn-save;
+    border: 1px solid $color-bg-btn-save;
+    margin-left: 16px;
+  }
+
+  @include modifier('cancel') {
+    color: $color-bg-btn-save;
+    border: 1px solid $color-bg-btn;
+  }
 }

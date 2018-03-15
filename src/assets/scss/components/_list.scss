@@ -1,0 +1,74 @@
+.list {
+  background-color: $color-background;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include element('row') {
+    background-color: $color-background;;
+
+    @include modifier('adding') {
+      padding-bottom: 16px;
+    }
+
+    @include modifier('infos') {
+      padding-bottom: 4px;
+    }
+  }
+
+  @include element('cover-icons') {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end
+  }
+
+  @include element('btn') {
+    margin-left: auto;
+    display: inline-flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  @include element('name') {
+    margin: 0;
+    padding-bottom: 32px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: $color-title;
+  }
+
+  @include element('infos') {
+  }
+
+  @include element('input-btn') {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #fff;
+  }
+
+  @include element('title') {
+    background-color: #fff;
+    display: flex;
+  }
+
+  @include element('t-name-icon') {
+    display: flex;
+    align-items: center;
+    width: 22%;
+  }
+
+  @include element('t-icon') {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 8px;
+    font-weight: 500;
+  }
+
+  @include element('detail') {
+  }
+  @include element('edit-save') {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+}
