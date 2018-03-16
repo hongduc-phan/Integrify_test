@@ -18,7 +18,8 @@
   @include element('cover-icons') {
     margin-left: auto;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    flex-grow: 1;
   }
 
   @include element('btn') {
