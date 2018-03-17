@@ -9,7 +9,8 @@
 }
 
 .btn--add {
-  width: 14%;
+  width: 120px;
+  height: 40px;
   color: #757575;
   border: 1px solid #ededed;
   margin-left: auto;
@@ -75,7 +76,7 @@
 }
 
 .list__row--infos {
-  padding-bottom: 4px;
+  padding-top: .1mm;
 }
 
 .list__cover-icons {
@@ -116,7 +117,6 @@
 .list__t-name-icon {
   display: flex;
   align-items: center;
-  width: 22%;
 }
 
 .list__t-icon {
@@ -134,8 +134,6 @@
 
 .input {
   display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
   margin-left: -16px;
   margin-right: -16px;
   width: 75%;
@@ -143,12 +141,11 @@
 
 .input__adding {
   margin-left: 16px;
-  margin-right: 16px;
   padding-left: 16px;
   padding-right: 16px;
-  border: 1px solid #000;
+  border: 1px solid #eae3e3;
   height: 40px;
-  width: 25%;
+  width: 27%;
   background-color: #fafafa;
   color: #909090;
   font-size: 16px;
@@ -160,13 +157,14 @@
 
 .input__editing {
   margin-left: 16px;
-  margin-right: 16px;
   padding-left: 16px;
   padding-right: 16px;
-  border: 1px solid #000;
   height: 40px;
-  width: 25%;
+  width: 27%;
   background-color: #f9f9f9;
+  border: 1px solid #eae3e3;
+  color: #505050;
+  font-size: 16px;
 }
 
 .input__editing--mail {
@@ -179,20 +177,10 @@
 }
 
 .info__text {
+  line-height: 24px;
   font-size: 16px;
-  overflow: scroll;
-}
-
-.info__text--name {
-  width: 22%;
-}
-
-.info__text--mail {
-  width: 35%;
-}
-
-.info__text--tel {
-  width: 22%;
+  font-weight: 400;
+  color: #505050;
 }
 
 .info__icon {
@@ -209,14 +197,44 @@
   line-height: 16px;
   font-size: 14px;
   font-weight: 500;
+  color: #757575;
 }
 
-.title--tel {
-  width: 22%;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.title--mail {
-  width: 35%;
+.table th,
+.table td {
+  width: 165px;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 220px;
+}
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+  padding-left: 24px;
+}
+
+thead tr {
+  text-align: left;
+  height: 48px;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+tbody tr {
+  text-align: left;
+  height: 72px;
+  border-bottom: 2px solid #f1f1f1;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 * {

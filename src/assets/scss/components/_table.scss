@@ -1,0 +1,40 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $color-view-range;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  & th,
+  & td {
+    width: 165px;
+  }
+
+  & th:nth-child(2) ,
+  & td:nth-child(2) {
+    width: 220px;
+  }
+
+  & th:nth-child(1) ,
+  & td:nth-child(1) {
+    padding-left: 24px;
+  }
+}
+
+thead {
+  & tr {
+    text-align: left;
+    height: 48px;
+    border-bottom: 2px solid $color-background;
+  }
+}
+
+tbody {
+  & tr {
+    text-align: left;
+    height: 72px;
+    border-bottom: 2px solid $color-background;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

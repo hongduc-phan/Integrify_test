@@ -3,20 +3,12 @@
   display: flex;
 
   @include element('text') {
+    line-height: 24px;
     font-size: 16px;
-    overflow: scroll;
-    
-    @include modifier('name') {
-      width: 22%;
-    }
-    @include modifier('mail') {
-      width: 35%;
-    }
-    @include modifier('tel') {
-      width: 22%;
-    }
+    font-weight: 400;
+    color: $color-body-text;
   }
-  
+
   @include element('icon') {
     font-size: 24px;
     height: 24px;

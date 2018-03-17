@@ -11,7 +11,7 @@
     }
 
     @include modifier('infos') {
-      padding-bottom: 4px;
+      padding-top: .1mm;
     }
   }
 
@@ -28,15 +28,13 @@
     justify-content: flex-end;
     flex-grow: 1;
   }
+
   @include element('name') {
     margin: 0;
     padding-bottom: 32px;
     font-size: 24px;
     font-weight: bolder;
     color: $color-title;
-  }
-
-  @include element('infos') {
   }
 
   @include element('input-btn') {
@@ -55,7 +53,6 @@
   @include element('t-name-icon') {
     display: flex;
     align-items: center;
-    width: 22%;
   }
 
   @include element('t-icon') {
@@ -65,8 +62,6 @@
     font-weight: 500;
   }
 
-  @include element('detail') {
-  }
   @include element('edit-save') {
     background-color: #fff;
     display: flex;
